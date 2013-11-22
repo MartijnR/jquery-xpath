@@ -1,4 +1,4 @@
-jquery-xpath
+jquery-xpath [![Build Status](https://travis-ci.org/MartijnR/jquery-xpath.png)](https://travis-ci.org/MartijnR/jquery-xpath)
 ============
 
-gets the XPath of an XML node
+Collection of XPath tools used in Enketo Smart Paper
