@@ -18,11 +18,11 @@
      */
     $.fn.getXPath = function( rootNodeName, includePosition ) {
         //other nodes may have the same XPath but because this function is used to determine the corresponding input name of a data node, index is not included 
-        var position = '',
+        var $sibSameNameAndSelf,
+            steps = [],
+            position = '',
             $node = this.first(),
             nodeName = $node.prop( 'nodeName' ),
-            $sibSameNameAndSelf = $node.siblings( nodeName ).addBack(),
-            steps = [ nodeName ],
             $parent = $node.parent(),
             parentName = $parent.prop( 'nodeName' );
 
@@ -30,9 +30,11 @@
         includePosition = includePosition || false;
 
         if ( includePosition ) {
+            $sibSameNameAndSelf = $node.siblings( nodeName ).addBack();
             position = ( $sibSameNameAndSelf.length > 1 ) ? '[' + ( $sibSameNameAndSelf.index( $node ) + 1 ) + ']' : '';
-            steps.push( nodeName + position );
         }
+
+        steps.push( nodeName + position );
 
         while ( $parent.length == 1 && parentName !== rootNodeName && parentName !== '#document' ) {
             if ( includePosition ) {
@@ -63,7 +65,7 @@
         selector = selector.replace( /\/\//g, " " );
 
         //added by Martijn
-        selector = selector.replace( /^\//, "" );
+        //selector = selector.replace( /^\//, "" );
         selector = selector.replace( /\/\.$/, "" );
 
         // Convert / to >
