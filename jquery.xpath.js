@@ -65,7 +65,7 @@
         selector = selector.replace( /\/\//g, " " );
 
         //added by Martijn
-        //selector = selector.replace( /^\//, "" );
+        selector = selector.replace( /^\//, "" );
         selector = selector.replace( /\/\.$/, "" );
 
         // Convert / to >
