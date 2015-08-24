@@ -1,14 +1,16 @@
 /**
- * Bunch of XPath tools used in Enketo Smart Paper
+ * Bunch of XPath tools 
  */
 
 ( function( factory ) {
-    if ( typeof define === 'function' && define.amd ) {
-        define( [ 'jquery' ], factory );
+    if ( typeof define === "function" && define.amd ) {
+        define( [ "jquery" ], factory );
+    } else if ( typeof exports === 'object' ) {
+        factory( require( 'jquery' ) );
     } else {
         factory( jQuery );
     }
-}( function( $ ) {
+}( function( $, undefined ) {
 
     /**
      * Creates an XPath from a node

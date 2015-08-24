@@ -6,10 +6,16 @@ module.exports = function( grunt ) {
         pkg: grunt.file.readJSON( 'package.json' ),
         jsbeautifier: {
             test: {
-                src: [ "*.js" ],
+                src: [ '*.js' ],
                 options: {
-                    config: "./.jsbeautifyrc",
-                    mode: "VERIFY_ONLY"
+                    config: './.jsbeautifyrc',
+                    mode: 'VERIFY_ONLY'
+                }
+            },
+            fix: {
+                src: [ '*.js' ],
+                options: {
+                    config: './.jsbeautifyrc'
                 }
             }
         },
