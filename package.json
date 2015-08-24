@@ -3,6 +3,7 @@
   "description": "Bunch of XPath tools used in Enketo Smart Paper",
   "homepage": "https://enketo.org",
   "version": "1.0.1",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/MartijnR/jquery-xpath.git"
