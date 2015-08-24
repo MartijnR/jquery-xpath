@@ -2,12 +2,13 @@
   "name": "jquery-xpath-basic",
   "description": "Bunch of XPath tools used in Enketo Smart Paper",
   "homepage": "https://enketo.org",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/MartijnR/jquery-xpath.git"
   },
+  "main": "./jquery.xpath.js",
   "contributors": [
     "Martijn van de Rijdt"
   ],
